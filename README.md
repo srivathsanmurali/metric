@@ -42,6 +42,5 @@ metric::TimerManager::print(true);
 An example can be seen in [test.cpp](test.cpp).
 
 ## References
-This tool was developed and is based on the [sm_timing](https://github.com/ethz-asl/schweizer_messer/tree/master/sm_timing).
-Having used the tool, it is very useful. But it depends on the boost library and having to have the boost library as a dependency
-timing can be not inefficient. Hence, this tool was written to work without the boost library.
+This tool is based on the excellent [sm_timing](https://github.com/ethz-asl/schweizer_messer/tree/master/sm_timing).
+But it depends on the boost library and including the boost library to use sm_timing is inefficient. Hence, this tool was written to work without the boost library.
