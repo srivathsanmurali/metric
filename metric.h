@@ -53,8 +53,9 @@ struct TimerValue
     ms = std::fmod(ms, 1000);
 
     std::stringstream ss;
-    ss << std::fixed << std::setprecision(0) << std::setfill('0') << std::setw(2)
-       << hour << ":" << min << ":" << sec << ":" << std::setw(3) << ms;
+    ss << std::fixed << std::setprecision(0) << std::setfill('0')
+       << std::setw(2) << hour << ":" << min << ":" << sec << ":"
+       << std::setw(3) << ms;
 
     return ss.str();
   }
@@ -130,14 +131,14 @@ private:
 class Timer
 {
 public:
-  Timer(const std::string& name_)
+  inline Timer(const std::string& name_)
     : name(name_)
   {
     TimerManager::instance().addTimer(name);
     start = std::chrono::high_resolution_clock::now();
   }
 
-  void stop()
+  inline void stop()
   {
     const auto end = std::chrono::high_resolution_clock::now();
     const double duration =
