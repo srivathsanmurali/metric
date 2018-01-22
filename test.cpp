@@ -52,6 +52,9 @@ main()
     testTiming2();
   }
 
+  // print in hr:min:sec:ms
   std::cout << metric::TimerManager::print();
+  // print in milliseconds
+  std::cout << metric::TimerManager::print(true);
   return EXIT_SUCCESS;
 }
